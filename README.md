@@ -14,6 +14,12 @@ A complete e-commerce platform built with **Laravel 12** — customer storefront
 
 ---
 
+## 📸 Screenshots
+
+![Surfside Homepage](https://kamran1272.github.io/portfolio/images/projects/surfside.png)
+
+---
+
 ## 📖 About
 
 Surfside is a full-featured online store with two distinct experiences:
