@@ -313,7 +313,7 @@
 
                             <div class="customer-option mt-4 text-center">
                                 <span class="text-secondary">Have an account?</span>
-                                <a href="{{ url('login') /website}}" class="btn-text js-show-register">Login to your
+                                <a href="{{ url('login') }}" class="btn-text js-show-register">Login to your
                                     Account</a>
                             </div>
                         </form>

@@ -9,7 +9,7 @@ class OrderController extends Controller
 {
     public function index()
     {
-        $orders = Order::withCount('items')->get();
+        $orders = Order::orderBy('created_at','desc')->paginate(10);
 
         return view('Admin.orders', compact('orders'));
     }

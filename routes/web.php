@@ -19,24 +19,22 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('brands', BrandController::class);
     Route::get('/brands', [BrandController::class, 'index'])->name('brands');
 
-     Route::resource('orders', OrderController::class);
+     Route::resource('orders', OrderController::class)->except(['create']);
 
 });
 
-Route::view('/index', 'admin.index');
-Route::view('/admin', 'admin.index');
-Route::view('/products', 'admin.products');
-Route::view('/add-brand', 'admin.add-brand');
-Route::view('/add-category', 'admin.add-category');
-Route::view('/add-coupon', 'admin.add-coupon');
-Route::view('/coupons', 'admin.coupons');
-Route::view('/users', 'admin.users');
-Route::view('/settings', 'admin.settings');
-Route::view('/add-side', 'admin.add-side');
-Route::view('/slider', 'admin.slider');
-Route::view('/order-details', 'admin.order-details');
-Route::view('/order-tracking', 'admin.order-tracking');
-Route::view('/orders', 'admin.orders');
+Route::view('/index', 'Admin.index');
+Route::view('/admin', 'Admin.index');
+Route::view('/add-brand', 'Admin.add-brand');
+Route::view('/add-category', 'Admin.add-category');
+Route::view('/add-coupon', 'Admin.add-coupon');
+Route::view('/coupons', 'Admin.coupons');
+Route::view('/users', 'Admin.users');
+Route::view('/settings', 'Admin.settings');
+Route::view('/add-slide', 'Admin.add-slide');
+Route::view('/slider', 'Admin.slider');
+Route::view('/order-details', 'Admin.order-details');
+Route::view('/order-tracking', 'Admin.order-tracking');
 Route::get('/add-product', [ProductController::class, 'create'])->name('products.add');
 
 

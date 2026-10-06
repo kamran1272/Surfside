@@ -12,12 +12,12 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::withCount('products')->latest()->paginate(10);
-        return view('admin.categories', compact('categories'));
+        return view('Admin.categories', compact('categories'));
     }
 
     public function create()
     {
-        return view('admin.add-category');
+        return view('Admin.add-category');
     }
 
     public function store(Request $request)
@@ -44,12 +44,12 @@ class CategoryController extends Controller
 
     public function show(Category $category)
     {
-        return view('admin.category-show', compact('category'));
+        return view('Admin.category-show', compact('category'));
     }
 
     public function edit(Category $category)
     {
-        return view('admin.edit-category', compact('category'));
+        return view('Admin.edit-category', compact('category'));
     }
 
     public function update(Request $request, Category $category)

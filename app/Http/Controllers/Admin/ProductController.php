@@ -16,14 +16,14 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::with('category', 'brand')->latest()->paginate(10);
-        return view('admin.products', compact('products')); 
+        return view('Admin.products', compact('products')); 
     }
 
     public function create()
     {
         $categories = Category::all();
         $brands = Brand::all();
-        return view('admin.add-product', compact('categories', 'brands'));
+        return view('Admin.add-product', compact('categories', 'brands'));
 
     }
 
@@ -85,14 +85,14 @@ class ProductController extends Controller
 
     public function show(Product $product)
     {
-        return view('admin.products.show', compact('product')); 
+        return view('Admin.products.show', compact('product')); 
     }
 
     public function edit(Product $product)
     {
         $categories = Category::all();
         $brands = Brand::all();
-        return view('admin.edit-product', compact('product', 'categories', 'brands')); 
+        return view('Admin.edit-product', compact('product', 'categories', 'brands')); 
     }
 
     public function update(Request $request, Product $product)
